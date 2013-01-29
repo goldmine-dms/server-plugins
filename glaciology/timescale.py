@@ -86,4 +86,7 @@ def spans_to_time(depth, time):
             output[i, 2] += val
 
     lst = nantonone(output.tolist())
-    return lst
+    time["data"] = lst
+    time["current_parameters"].append(depth["current_parameters"][0])
+    print depth.keys()
+    return time
